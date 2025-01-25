@@ -32,27 +32,27 @@ NetBSD 是 NetBSD 基金会的注册商标。
 
 ---
 
- 前言
+前言
 
 到目前为止，FreeBSD 项目已发布了许多描述不同工作部分的技术。然而，由于项目成员数量不断增加，需要一个总结项目结构的项目模型。^[1]^ 本文将提供这样一个项目模型，并捐赠给 FreeBSD 文档项目，以便与项目一起发展，从而随时反映项目的工作方式。它基于[ Saers,2003]。
 
 我想感谢以下的人，他们花时间为我解释不清楚的事情，并校对文件。
 
-* Andrey A. Chernov [ache@freebsd.org](mailto:ache@freebsd.org)
-* Bruce A. Mah [bmah@freebsd.org](mailto:bmah@freebsd.org)
-* Dag-Erling Smørgrav [des@freebsd.org](mailto:des@freebsd.org)
-* Giorgos Keramidas [keramida@freebsd.org](mailto:keramida@freebsd.org)
-* Ingvil Hovig [ingvil.hovig@skatteetaten.no](mailto:ingvil.hovig@skatteetaten.no)
-* Jesper Holck [jeh.inf@cbs.dk](mailto:jeh.inf@cbs.dk)
-* John Baldwin [jhb@freebsd.org](mailto:jhb@freebsd.org)
-* John Polstra [jdp@freebsd.org](mailto:jdp@freebsd.org)
-* Kirk McKusick [mckusick@freebsd.org](mailto:mckusick@freebsd.org)
-* Mark Linimon [linimon@freebsd.org](mailto:linimon@freebsd.org)
-* Marleen Devos
-* Niels Jørgenssen [nielsj@ruc.dk](mailto:nielsj@ruc.dk)
-* Nik Clayton [nik@freebsd.org](mailto:nik@freebsd.org)
-* Poul-Henning Kamp [phk@freebsd.org](mailto:phk@freebsd.org)
-* Simon L. Nielsen [simon@freebsd.org](mailto:simon@freebsd.org)
+- Andrey A. Chernov [ache@freebsd.org](mailto:ache@freebsd.org)
+- Bruce A. Mah [bmah@freebsd.org](mailto:bmah@freebsd.org)
+- Dag-Erling Smørgrav [des@freebsd.org](mailto:des@freebsd.org)
+- Giorgos Keramidas [keramida@freebsd.org](mailto:keramida@freebsd.org)
+- Ingvil Hovig [ingvil.hovig@skatteetaten.no](mailto:ingvil.hovig@skatteetaten.no)
+- Jesper Holck [jeh.inf@cbs.dk](mailto:jeh.inf@cbs.dk)
+- John Baldwin [jhb@freebsd.org](mailto:jhb@freebsd.org)
+- John Polstra [jdp@freebsd.org](mailto:jdp@freebsd.org)
+- Kirk McKusick [mckusick@freebsd.org](mailto:mckusick@freebsd.org)
+- Mark Linimon [linimon@freebsd.org](mailto:linimon@freebsd.org)
+- Marleen Devos
+- Niels Jørgenssen [nielsj@ruc.dk](mailto:nielsj@ruc.dk)
+- Nik Clayton [nik@freebsd.org](mailto:nik@freebsd.org)
+- Poul-Henning Kamp [phk@freebsd.org](mailto:phk@freebsd.org)
+- Simon L. Nielsen [simon@freebsd.org](mailto:simon@freebsd.org)
 
 ## 1. 概述
 
@@ -94,10 +94,10 @@ NetBSD 是 NetBSD 基金会的注册商标。
 
 FreeBSD 项目的结构（按降序权限排列）
 
-| 组       | 人数      |
-| ---------- | ----------- |
-| 核心成员 | 9         |
-| 贡献者   | 318       |
+| 组       | 人数   |
+| -------- | ------ |
+| 核心成员 | 9      |
+| 贡献者   | 318    |
 | 贡献者   | \~3000 |
 
 通过查阅 2004 年 1 月 1 日至 2004 年 12 月 31 日的 CVS 日志，已确定贡献人数；通过查阅贡献清单和问题报告，已确定贡献者人数。
@@ -106,19 +106,19 @@ FreeBSD 社区中的主要资源是其开发人员：提交者和贡献者。正
 
 提交者是具有提交更改权限的开发人员。这些通常是最活跃的开发人员，他们愿意花时间不仅集成自己的代码，还集成那些没有此权限的开发人员提交的代码。他们还是选举核心团队的开发人员，并且可以访问封闭讨论。
 
-该项目可以分为四个明确的独立部分，大多数开发人员将专注于 FreeBSD 的一个部分。这四个部分分别是内核开发，用户空间开发，ports和文档。在提到基本系统时，内核和用户空间都是指的。
+该项目可以分为四个明确的独立部分，大多数开发人员将专注于 FreeBSD 的一个部分。这四个部分分别是内核开发，用户空间开发，ports 和文档。在提到基本系统时，内核和用户空间都是指的。
 
 这个拆分会使我们的表格变成这样：
 
 FreeBSD 项目的结构和类别中的合作者
 
-| 组       | 类别  | 人数      |
-| ---------- | ------- | ----------- |
-| 核心成员 |       | 9         |
-| 提交者   | Base  | 164       |
-|          | Docs  | 45        |
-|          | Ports | 166       |
-|          | 总数  | 374       |
+| 组       | 类别  | 人数   |
+| -------- | ----- | ------ |
+| 核心成员 |       | 9      |
+| 提交者   | Base  | 164    |
+|          | Docs  | 45     |
+|          | Ports | 166    |
+|          | 总数  | 374    |
 | 贡献者   |       | \~3000 |
 
 每个区域的 Committer 数量是通过查看从 2004 年 1 月 1 日到 2004 年 12 月 31 日的 CVS 日志进行确定的。请注意，许多 Committer 在多个区域工作，使得实际 Committer 数量比实际 Committer 数量要高。2022 年 6 月活跃的独特 Committer 总数为 317。
@@ -131,7 +131,7 @@ Committers 分为三组：只关注项目的一个区域（例如文件系统）
 
 文档由 FreeBSD 文档项目处理，包括围绕 FreeBSD 项目的所有文档，包括网页。在 2004 年，有 101 人向 FreeBSD 文档项目提交了内容。
 
-Ports是在 FreeBSD 上使软件包正确构建所需的元数据集合。一个port的示例是 Web 浏览器 Mozilla 的port。它包含关于从哪里获取源代码、应用哪些修补程序以及如何在系统上安装软件包的信息。这使得自动化工具可以获取、构建和安装软件包。截至本文撰写时，有超过 12600 个ports可用，其中涵盖了从 Web 服务器到游戏、编程语言以及现代计算机上使用的大多数应用类型。Ports将在“Ports子项目”部分进一步讨论。
+Ports 是在 FreeBSD 上使软件包正确构建所需的元数据集合。一个 port 的示例是 Web 浏览器 Mozilla 的 port。它包含关于从哪里获取源代码、应用哪些修补程序以及如何在系统上安装软件包的信息。这使得自动化工具可以获取、构建和安装软件包。截至本文撰写时，有超过 12600 个 ports 可用，其中涵盖了从 Web 服务器到游戏、编程语言以及现代计算机上使用的大多数应用类型。Ports 将在“Ports 子项目”部分进一步讨论。
 
 ## 4. 方法论模型
 
@@ -142,7 +142,7 @@ FreeBSD 中写代码的人没有定义的模型。然而，Niels Jørgenssen 提
 Jørgenssen 的变革整合模型
 
 | 阶段         | 成功后进行下一步 | 下一个 如果 不成功 |
-| -------------- | ------------------ | -------------------- |
+| ------------ | ---------------- | ------------------ |
 | 代码         | 审查             |                    |
 | 复查         | 预提交测试       | 代码               |
 | 预提交测试   | 发布版本开发     | 代码               |
@@ -166,7 +166,7 @@ Jørgensen 发现大多数 FreeBSD 开发人员是独立工作的，这意味着
 
 该模型的唯一例外是针对安全修复和在当前分支中已弃用的功能所做的更改。在这些情况下，更改可以直接提交到稳定分支。
 
-除了许多参与该项目的人之外，FreeBSD 项目还有许多相关项目。这些项目要么是开发全新功能的项目，要么是子项目，或者是项目的成果被整合到 FreeBSD 中^[ 4]^。这些项目与 FreeBSD 项目的关系与常规开发工作类似：它们生成的代码会与 FreeBSD 项目集成。然而，其中一些项目（如Ports和文档）有特权直接适用于当前分支和稳定分支。
+除了许多参与该项目的人之外，FreeBSD 项目还有许多相关项目。这些项目要么是开发全新功能的项目，要么是子项目，或者是项目的成果被整合到 FreeBSD 中^[ 4]^。这些项目与 FreeBSD 项目的关系与常规开发工作类似：它们生成的代码会与 FreeBSD 项目集成。然而，其中一些项目（如 Ports 和文档）有特权直接适用于当前分支和稳定分支。
 
 关于设计的标准并不存在，设计也没有集中存储在一个仓库中。主要设计是 4.4BSD 的设计^[ 5]^。由于设计属于 Jørgenssen 模型中的"代码"部分，每个开发人员或子项目可以自行决定如何进行设计。即使设计应该存储在中央仓库中，设计阶段的输出也将用处有限，因为各种方法的差异将使它们很少甚至根本无法互操作。对于项目的整体设计，项目依赖于子项目之间协商适当接口，而不是强行规定接口。
 
@@ -180,14 +180,14 @@ FreeBSD 的发布最好通过一棵树来说明，其中有许多分支，每个
 
 图 1. FreeBSD 发行树
 
-| 主要发布                         | 分叉自      | 以下是次要版本发布                                                                                                                                                                                                 |
-| ---------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| …                               |             |                                                                                                                                                                                                                    |
-| 3.0 当前（开发分支）             |             | Releng 3 branches: 3.0 Release to 3.5 Release, leading to 3.5.1 Release and the subsequent 3 Stable branch                                                                                                         |
-| 4.0 Current (development branch) | 3.1 Release | Releng 4 branches: 4.1 Release to 4.6 Release (and 4.6.2 Release), then 4.7 Release to 4.11 Release (all starting at 4.3 Release also leading to a Releng\_4\_n branch), and the subsequent 4 Release branch |
-| 5.0 Current (development branch) | 4.0 Release | Releng 5 branches: 5.0 发布到 5.4 发布（除了 5.0 和 5.3 之外，还导致 Releng_5_n 分支），以及随后的 5 发布分支                                                                                                      |
-| 6.0 当前（开发分支）             | 5.3 发布    |                                                                                                                                                                                                                    |
-| …                               |             |                                                                                                                                                                                                                    |
+| 主要发布                         | 分叉自      | 以下是次要版本发布                                                                                                                                                                                         |
+| -------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| …                                |             |                                                                                                                                                                                                            |
+| 3.0 当前（开发分支）             |             | Releng 3 branches: 3.0 Release to 3.5 Release, leading to 3.5.1 Release and the subsequent 3 Stable branch                                                                                                 |
+| 4.0 Current (development branch) | 3.1 Release | Releng 4 branches: 4.1 Release to 4.6 Release (and 4.6.2 Release), then 4.7 Release to 4.11 Release (all starting at 4.3 Release also leading to a Releng_4_n branch), and the subsequent 4 Release branch |
+| 5.0 Current (development branch) | 4.0 Release | Releng 5 branches: 5.0 发布到 5.4 发布（除了 5.0 和 5.3 之外，还导致 Releng_5_n 分支），以及随后的 5 发布分支                                                                                              |
+| 6.0 当前（开发分支）             | 5.3 发布    |                                                                                                                                                                                                            |
+| …                                |             |                                                                                                                                                                                                            |
 
 最新的-CURRENT 版本始终被称为-CURRENT，而最新的-STABLE 版本始终被称为-STABLE。在这个图中，-STABLE 指的是 4-STABLE，而-CURRENT 指的是 5.0-CURRENT，接下来是 5.0-RELEASE。【FreeBSD，2002E】
 
@@ -265,11 +265,11 @@ FreeBSD 文档项目架构师负责为文档项目中的提交者定义和跟踪
 
 发布工程团队的责任是
 
-* 为官方发布设置、发布和遵循发布时间表
-* 记录和规范发布工程流程
-* 创建和维护代码分支
-* 与Ports和文档团队协调，确保更新的软件包和文档随新版本一起发布
-* 与安全团队协调，以确保未完成的发布不受最近披露的漏洞影响。
+- 为官方发布设置、发布和遵循发布时间表
+- 记录和规范发布工程流程
+- 创建和维护代码分支
+- 与 Ports 和文档团队协调，确保更新的软件包和文档随新版本一起发布
+- 与安全团队协调，以确保未完成的发布不受最近披露的漏洞影响。
 
 有关开发过程的更多信息，请参阅发布工程部分。
 
@@ -279,10 +279,10 @@ FreeBSD 文档项目架构师负责为文档项目中的提交者定义和跟踪
 
 公共关系与公司联络的职责是：
 
-* 当发生对 FreeBSD 项目重要的事情时，发布新闻声明。
-* 作为与 FreeBSD 项目密切合作的公司的官方联系人。
-* 采取措施在开源社区和企业界内推广 FreeBSD。
-* 处理“freebsd-advocacy”邮件列表。
+- 当发生对 FreeBSD 项目重要的事情时，发布新闻声明。
+- 作为与 FreeBSD 项目密切合作的公司的官方联系人。
+- 采取措施在开源社区和企业界内推广 FreeBSD。
+- 处理“freebsd-advocacy”邮件列表。
 
 这顶帽子目前没有人佩戴。
 
@@ -376,7 +376,7 @@ Hat 由：管理员团队 admin@FreeBSD.org 持有。
 
 ### 6.1. 添加新的提交者并移除旧的提交者
 
-核心团队有责任向贡献者授予和移除提交权限。这只能通过核心邮件列表上的投票来完成。ports和文档子项目可以向在这些项目上工作的人授予提交权限，但迄今为止尚未取消此类权限。
+核心团队有责任向贡献者授予和移除提交权限。这只能通过核心邮件列表上的投票来完成。ports 和文档子项目可以向在这些项目上工作的人授予提交权限，但迄今为止尚未取消此类权限。
 
 通常，贡献者由提交者推荐给核心。贡献者或外部人员联系核心要求成为提交者并不被认可，通常会被拒绝。
 
@@ -471,9 +471,9 @@ Hat 由：管理员团队 admin@FreeBSD.org 持有。
 
 核心选举中的帽子有：
 
-* [ 核心团队](https://docs.freebsd.org/en/books/dev-model/#role-core)
-* [ 提交者](https://docs.freebsd.org/en/books/dev-model/#role-committer)
-* [ 选举经理](https://docs.freebsd.org/en/books/dev-model/#role-election-manager)
+- [ 核心团队](https://docs.freebsd.org/en/books/dev-model/#role-core)
+- [ 提交者](https://docs.freebsd.org/en/books/dev-model/#role-committer)
+- [ 选举经理](https://docs.freebsd.org/en/books/dev-model/#role-election-manager)
 
 [FreeBSD, 2000A] [FreeBSD, 2002B] [FreeBSD, 2002G]
 
@@ -498,7 +498,7 @@ Hat 由：管理员团队 admin@FreeBSD.org 持有。
 乔根森的变革整合模型
 
 | 阶段       | 成功后进行下一步 | 如果不成功就下一个 |
-| ------------ | ------------------ | -------------------- |
+| ---------- | ---------------- | ------------------ |
 | 代码       | 审查             |                    |
 | 复习       | 预提交测试       | 代码               |
 | 预提交测试 | 开发发布         | 代码               |
@@ -536,12 +536,12 @@ Hat 由：管理员团队 admin@FreeBSD.org 持有。
 
 自 2001 年起，FreeBSD 确立了一系列开发者应遵守的规则。然而，规则偶尔会被违反。以下规定旨在针对不当行为做出反应。它们明确了会导致开发者提交权限暂时中止多长时间的行为。
 
-* 未经发布工程团队批准在代码冻结期间提交代码 - 2 天
-* 在未经批准的情况下承诺到安全分支 - 2 天
-* 提交战争 - 所有参与方需 5 天
-* 无礼或不当行为 - 5 天
+- 未经发布工程团队批准在代码冻结期间提交代码 - 2 天
+- 在未经批准的情况下承诺到安全分支 - 2 天
+- 提交战争 - 所有参与方需 5 天
+- 无礼或不当行为 - 5 天
 
- 【Lehey，2002】
+【Lehey，2002】
 
 为了让停职生效，任何单个核心成员都可以在在“核心”邮件列表上讨论之前实施停职。在核心成员经过 2/3 的投票通过之后，惯犯可能会受到更严厉的惩罚，包括永久取消提交权限。（然而，后者总是被视为最后的选择，因为它固有地会引起争议。）所有的停职都会发布到“开发者”邮件列表上，这是一个只开放给提交者的列表。
 
@@ -549,8 +549,8 @@ Hat 由：管理员团队 admin@FreeBSD.org 持有。
 
 在这个过程中涉及到的帽子:
 
-* [ 核心团队](https://docs.freebsd.org/en/books/dev-model/#role-core)
-* [ 提交者](https://docs.freebsd.org/en/books/dev-model/#role-committer)
+- [ 核心团队](https://docs.freebsd.org/en/books/dev-model/#role-core)
+- [ 提交者](https://docs.freebsd.org/en/books/dev-model/#role-committer)
 
 ### 6.8. 发布工程
 
@@ -568,7 +568,7 @@ FreeBSD 项目设有一个发布工程团队，一个主要的发布工程师负
 
 -CURRENT-分支的发布（即以".0"结尾的所有发布）非常相似，但时间跨度是原来的两倍长。发布前 8 周开始公布发布时间表。进入发布流程两周后，启动功能冻结，性能调整应保持最低限度。发布前四周，官方的测试版发布。发布前两周，代码正式分支为新版本。该版本被赋予发布候选状态，与-STABLE 的发布工程一样，发布候选的代码冻结是加固的。然而，主开发分支上的开发可以继续。除了这些差异，发布工程流程是相似的。
 
- *.0 版本进入自己的分支，主要面向早期采用者。然后该分支经历稳定期，直到发布工程团队决定满足了稳定性要求，该分支才变为-STABLE，而-CURRENT 则针对下一个主要版本。尽管大多数情况下是*.1 版本，但这并非必须。
+_.0 版本进入自己的分支，主要面向早期采用者。然后该分支经历稳定期，直到发布工程团队决定满足了稳定性要求，该分支才变为-STABLE，而-CURRENT 则针对下一个主要版本。尽管大多数情况下是_.1 版本，但这并非必须。
 
 大多数发布是在被认为距离上一个发布足够长的日期时进行的。设定每 18 个月进行一次主要发布和每 4 个月进行一次次要发布的目标。用户社区已经非常明确地表示，安全性和稳定性不能被自我设定的截止日期和目标发布日期所牺牲。为了避免时间滞后对安全性和稳定性问题造成过长影响，提交更改到-STABLE 时需要额外的纪律。
 
@@ -582,7 +582,7 @@ FreeBSD 项目设有一个发布工程团队，一个主要的发布工程师负
 8. 警告镜像
 9. 发布版本
 
- [FreeBSD，2002 年]
+[FreeBSD，2002 年]
 
 ## 7. 工具
 
@@ -612,23 +612,23 @@ Mailman 是一个自动化邮件列表管理程序。FreeBSD 项目使用它来�
 
 子项目是为了减少协调开发人员组的沟通量而形成的。当一个问题领域被充分隔离时，大多数沟通将在致力于问题的小组内部进行，相较于未被隔离的组，与他们交流的沟通会更少。
 
-### 8.1. Ports子项目
+### 8.1. Ports 子项目
 
 一个 "port" 是一组元数据和补丁，它们需要在 FreeBSD 系统上正确获取、编译和安装外部软件。 ports 的数量以惊人的速度增长，如下图所示。
 
 1995 年至 2022 年间新增的 ports 数量
 
- 镜像::portsstatus.svg
+镜像::portsstatus.svg
 
-[fig-ports]显示了 1995 年至 2022 年间 FreeBSD 可用的ports数量。看起来曲线首先呈指数增长，然后从 2001 年中期到 2007 年中期以每年约 2000 个ports的速度线性增长，然后增长速度变慢。
+[fig-ports]显示了 1995 年至 2022 年间 FreeBSD 可用的 ports 数量。看起来曲线首先呈指数增长，然后从 2001 年中期到 2007 年中期以每年约 2000 个 ports 的速度线性增长，然后增长速度变慢。
 
-由于port描述的外部软件经常在持续开发中，维护ports所需的工作量已经很大，并且正在增加。这导致 FreeBSD 项目的ports部分拥有更加强大的结构，并且越来越成为 FreeBSD 项目的一个子项目。
+由于 port 描述的外部软件经常在持续开发中，维护 ports 所需的工作量已经很大，并且正在增加。这导致 FreeBSD 项目的 ports 部分拥有更加强大的结构，并且越来越成为 FreeBSD 项目的一个子项目。
 
-Ports有自己的核心团队，由Ports经理领导，该团队可以任命提交者，无需经过 FreeBSD 核心团队的批准。与 FreeBSD 项目不同，ports子项目包含许多活跃的维护者，他们并非提交者，因此很多维护工作并不一定会获得提交权限。
+Ports 有自己的核心团队，由 Ports 经理领导，该团队可以任命提交者，无需经过 FreeBSD 核心团队的批准。与 FreeBSD 项目不同，ports 子项目包含许多活跃的维护者，他们并非提交者，因此很多维护工作并不一定会获得提交权限。
 
-与主项目不同，ports树没有分支。FreeBSD 的每个发布版本都遵循当前ports集合，因此提供了关于程序位置和构建方法的最新信息。然而，这意味着对系统有依赖的port可能需要根据运行的 FreeBSD 版本的不同而有所变化。
+与主项目不同，ports 树没有分支。FreeBSD 的每个发布版本都遵循当前 ports 集合，因此提供了关于程序位置和构建方法的最新信息。然而，这意味着对系统有依赖的 port 可能需要根据运行的 FreeBSD 版本的不同而有所变化。
 
-由于ports存储库没有分支，无法保证任何port能在除了-CURRENT 和-STABLE 之外的其他版本上运行，尤其是旧的次要发布版本。既没有基础设施，也没有志愿者时间来保证这一点。
+由于 ports 存储库没有分支，无法保证任何 port 能在除了-CURRENT 和-STABLE 之外的其他版本上运行，尤其是旧的次要发布版本。既没有基础设施，也没有志愿者时间来保证这一点。
 
 为了沟通的效率，依赖于 Ports 的团队，如发布工程团队，拥有他们自己的 ports 联络人。
 
@@ -642,23 +642,23 @@ FreeBSD 文档项目始于 1995 年 1 月。从最初的一个项目负责人、
 
 像 FreeBSD 项目一样，文档也分为相同的分支。这样做是为了保持每个版本的文档始终更新。只有文档错误才在安全分支中得到纠正。
 
-像ports子项目一样，文档项目可以在没有 FreeBSD 核心批准的情况下任命文档委员。[ FreeBSD，2003B]。
+像 ports 子项目一样，文档项目可以在没有 FreeBSD 核心批准的情况下任命文档委员。[ FreeBSD，2003B]。
 
 文档项目有一个入门指南。这既用于向新项目成员介绍标准工具和语法，也用作在项目上工作时的参考。
 
 ## 参考资料
 
-[布鲁克斯，1995]弗雷德里克 P.布鲁克斯。版权©1975 年，1995 年皮尔逊教育有限公司。0201835959。Addison-Wesley Pub Co.神话般的人月。软件工程专题(第二版)。
+[布鲁克斯，1995]弗雷德里克 P.布鲁克斯。版权 ©1975 年，1995 年皮尔逊教育有限公司。0201835959。Addison-Wesley Pub Co.神话般的人月。软件工程专题(第二版)。
 
-[Saers，2003]尼克拉斯·萨尔斯。版权©2003 年。FreeBSD 项目的项目模型。科学学位论文。http://niklas.saers.com/thesis。
+[Saers，2003]尼克拉斯·萨尔斯。版权 ©2003 年。FreeBSD 项目的项目模型。科学学位论文。http://niklas.saers.com/thesis。
 
-[Jørgensen，2001]Niels Jørgensen。版权©2001 年。把一切都放在后备箱里。FreeBSD 开源项目中的增量软件开发。http://www.dat.ruc.dk/~nielsj/research/papers/freebsd.pdf。
+[Jørgensen，2001]Niels Jørgensen。版权 ©2001 年。把一切都放在后备箱里。FreeBSD 开源项目中的增量软件开发。http://www.dat.ruc.dk/~nielsj/research/papers/freebsd.pdf。
 
-[PMI，2000] 项目管理学会。版权所有©1996 年，2000 年项目管理学会。1-880410-23-0。项目管理学会。美国宾夕法尼亚纽镇。PMBOK 指南。项目管理知识体系指南，2000 年版。
+[PMI，2000] 项目管理学会。版权所有 ©1996 年，2000 年项目管理学会。1-880410-23-0。项目管理学会。美国宾夕法尼亚纽镇。PMBOK 指南。项目管理知识体系指南，2000 年版。
 
-[FreeBSD，2000A] 版权所有©2002 年 FreeBSD 项目。核心章程。https://www.freebsd.org/internal/bylaws/。
+[FreeBSD，2000A] 版权所有 ©2002 年 FreeBSD 项目。核心章程。https://www.freebsd.org/internal/bylaws/。
 
-[FreeBSD，2002A] 版权所有©2002 年 FreeBSD 文档项目。FreeBSD 开发者手册。开发者手册。
+[FreeBSD，2002A] 版权所有 ©2002 年 FreeBSD 文档项目。FreeBSD 开发者手册。开发者手册。
 
 [FreeBSD, 2002B] 版权 © 2002 FreeBSD 项目. 核心团队选举 2002. http://election.uk.freebsd.org/candidates.html.
 
@@ -666,9 +666,9 @@ FreeBSD 文档项目始于 1995 年 1 月。从最初的一个项目负责人、
 
 [FreeBSD, 2002D] Dag-Erling Smørgrav. 版权 © 2002 FreeBSD 文档项目. FreeBSD 文档项目. 编写 FreeBSD 问题报告. 编写 FreeBSD 问题报告.
 
-[FreeBSD，2001] 版权 © 2001 年FreeBSD 文档项目。FreeBSD 文档项目。Committer 指南。Committer's 指南。
+[FreeBSD，2001] 版权 © 2001 年 FreeBSD 文档项目。FreeBSD 文档项目。Committer 指南。Committer's 指南。
 
-[FreeBSD，2002E] Murray Stokely。版权 © 2002 年FreeBSD 文档项目。FreeBSD 文档项目。FreeBSD 发布工程。FreeBSD 发布工程。
+[FreeBSD，2002E] Murray Stokely。版权 © 2002 年 FreeBSD 文档项目。FreeBSD 文档项目。FreeBSD 发布工程。FreeBSD 发布工程。
 
 [FreeBSD，2003A] FreeBSD 文档项目。FreeBSD 手册。FreeBSD 手册。
 
@@ -688,7 +688,7 @@ FreeBSD 文档项目始于 1995 年 1 月。从最初的一个项目负责人、
 
 这与布鲁克斯定律相辅相成，即向一个已经延迟的项目添加另一个人会使项目变得更晚，因为这将增加沟通需求。项目模型是一种减少沟通需求的工具。
 
-统计数据是通过计算截至 2005 年 4 月 1 日通过 portsdb 获取的文件中条目的数量而生成的。portsdb 是port sysutils/portupgrade 的一部分。
+统计数据是通过计算截至 2005 年 4 月 1 日通过 portsdb 获取的文件中条目的数量而生成的。portsdb 是 port sysutils/portupgrade 的一部分。
 
 为了找到这个数字，研究了 2004 年 1 月 1 日至 2004 年 12 月 31 日的时期。
 
