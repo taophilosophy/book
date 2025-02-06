@@ -64,11 +64,11 @@ NetBSD 是 NetBSD 基金会的注册商标。
 
 在提供使用术语的定义后，本文将概述组织结构（包括角色描述和沟通线路），讨论方法论模型，并在介绍用于过程控制的工具后，将呈现定义的过程。最后，它将概述 FreeBSD 项目的主要子项目。
 
-'[自由貝獲得, 2002A] 第 1.2 節和 1.3 節提供了項目的願景和架構指南。願景是“以最大限度地尊重原始軟件工具意識形態以及可用性、性能和穩定性為目標，生產可能的最佳類 UNIX 操作系統軟件包。”架構指南有助於確定某個希望解決的問題是否屬於項目的範圍。'
+[自由贝获得, 2002A] 第 1.2 节和 1.3 节提供了项目的愿景和架构指南。愿景是“以最大限度地尊重原始软件工具意识形态以及可用性、性能和稳定性为目标，生产可能的最佳类 UNIX 操作系统软件包。”架构指南有助于确定某个希望解决的问题是否属于项目的范围。
 
-## '2. 定義'
+## 2. 定义
 
-### '2.1. 活動'
+### 2.1. 活动
 
 "活动"是项目过程中执行的工作要素[PMI，2000]。它具有输出并导向结果。这样的输出可以是另一个活动的输入，也可以是流程交付的一部分。
 
@@ -666,23 +666,23 @@ FreeBSD 文档项目始于 1995 年 1 月。从最初的一个项目负责人、
 
 [FreeBSD, 2002D] Dag-Erling Smørgrav. 版权 © 2002 FreeBSD 文档项目. FreeBSD 文档项目. 编写 FreeBSD 问题报告. 编写 FreeBSD 问题报告.
 
-[FreeBSD，2001] 版权 © 2001 年 FreeBSD 文档项目。FreeBSD 文档项目。Committer 指南。Committer's 指南。
+[FreeBSD，2001] 版权 © 2001 年 FreeBSD 文档项目。FreeBSD 文档项目。Committer 指南。Committers 指南。
 
 [FreeBSD，2002E] Murray Stokely。版权 © 2002 年 FreeBSD 文档项目。FreeBSD 文档项目。FreeBSD 发布工程。FreeBSD 发布工程。
 
 [FreeBSD，2003A] FreeBSD 文档项目。FreeBSD 手册。FreeBSD 手册。
 
-'[FreeBSD, 2002F] 版权 © 2002 FreeBSD 文档项目。FreeBSD 文档项目。FreeBSD 的贡献者。FreeBSD 的贡献者。'
+[FreeBSD, 2002F] 版权 © 2002 FreeBSD 文档项目。FreeBSD 文档项目。FreeBSD 的贡献者。FreeBSD 的贡献者。
 
-'[FreeBSD, 2002G] 版权 © 2002 FreeBSD 项目。FreeBSD 项目。核心团队选举 2002。http://election.uk.freebsd.org。'
+[FreeBSD, 2002G] 版权 © 2002 FreeBSD 项目。FreeBSD 项目。核心团队选举 2002。http://election.uk.freebsd.org。
 
-'[FreeBSD, 2002H] 版权 © 2002 FreeBSD 项目。FreeBSD 项目。Commit 权限过期政策。2002/04/06 15:35:30。https://www.freebsd.org/internal/expire-bits/。'
+[FreeBSD, 2002H] 版权 © 2002 FreeBSD 项目。FreeBSD 项目。Commit 权限过期政策。2002/04/06 15:35:30。https://www.freebsd.org/internal/expire-bits/。
 
-'[FreeBSD，2002I] 版权所有 © 2002 FreeBSD 项目。FreeBSD 项目。新帐户创建流程。2002/08/19 17:11:27。https://www.freebsd.org/internal/new-account/。
+[FreeBSD，2002I] 版权所有 © 2002 FreeBSD 项目。FreeBSD 项目。新帐户创建流程。2002/08/19 17:11:27。https://www.freebsd.org/internal/new-account/。
 
-'[FreeBSD，2003B] 版权所有 © 2002 FreeBSD 文档项目。FreeBSD 文档项目。FreeBSD DocEng 团队宪章。2003/03/16 12:17。https://www.freebsd.org/internal/doceng/。
+[FreeBSD，2003B] 版权所有 © 2002 FreeBSD 文档项目。FreeBSD 文档项目。FreeBSD DocEng 团队宪章。2003/03/16 12:17。https://www.freebsd.org/internal/doceng/。
 
-'[Lehey，2002] Greg Lehey。版权所有 © 2002 Greg Lehey。Greg Lehey。在战壕中度过的两年。软件项目的演变。http://www.lemis.com/grog/In-the-trenches.pdf。
+[Lehey，2002] Greg Lehey。版权所有 © 2002 Greg Lehey。Greg Lehey。在战壕中度过的两年。软件项目的演变。http://www.lemis.com/grog/In-the-trenches.pdf。
 
 ---
 
